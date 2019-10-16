@@ -5,7 +5,7 @@ public class Hobby {
     private int spentHours;
     private String description;
 
-    private boolean isRelevantNow;
+    private boolean isRelevantNow; // true
     private char hobbyPriority; // A B C D E F
     private byte difficulty; // 1-10
     private float averageHoursPerDay;
