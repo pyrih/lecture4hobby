@@ -4,14 +4,8 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        //1
-        Hobby firsHobby = new Hobby();
-        firsHobby.setName("Running");
-        firsHobby.setSpentHours(200);
-        firsHobby.setDescription("I run in the morning on long distance.");
-
-        //2
-        Hobby secondHobby = new Hobby("Swimming", 20);
+        Hobby firsHobby = new Running("Running", 200, "Description.", 113.7f);
+        Hobby secondHobby = new Swimming("Swimming", 20, "Description..", 5.45);
 
         //3 Как вариант можно реализовать через цикл используя метод hasNextLine() класса Сканнер
         Scanner scanner = new Scanner(System.in);
@@ -21,11 +15,10 @@ public class Test {
         System.out.println("Enter time spent on your hobby: ");
         int timeFromKB = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("Enter description: ");
-        String descrFromKB = scanner.nextLine();
+        System.out.println("Enter number of sessions per week: ");
+        int sessionsFromKB = Integer.parseInt(scanner.nextLine());
 
-        // явно НЕ СОЗДАВАЛ объект со всеми полями, поэтому при выводе на экран значения незаполненных полей будут по умолчанию
-        Hobby thirdHobby = new Hobby(nameFromKB, timeFromKB, descrFromKB);
+        Hobby thirdHobby = new Gym(nameFromKB, timeFromKB, sessionsFromKB);
 
         Hobby[] hobbies = {firsHobby, secondHobby, thirdHobby};
         System.out.println("My hobbies: ");

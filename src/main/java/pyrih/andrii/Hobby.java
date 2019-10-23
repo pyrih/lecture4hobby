@@ -5,10 +5,10 @@ public abstract class Hobby {
     private int spentHours;
     private String description;
 
-    public Hobby() {
+    Hobby() {
     }
 
-    public Hobby(String name, int spentHours) {
+    Hobby(String name, int spentHours) {
         this.name = name;
         this.spentHours = spentHours;
         this.description = "no description";
@@ -19,7 +19,6 @@ public abstract class Hobby {
         this.spentHours = spentHours;
         this.description = description;
     }
-
 
     public String getName() {
         return name;
