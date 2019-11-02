@@ -1,20 +1,22 @@
-package pyrih.andrii;
+package pyrih.andrii.entities;
+
+import pyrih.andrii.exceprions.HobbyException;
 
 public abstract class Hobby {
     private String name;
     private int spentHours;
     private String description;
 
-    Hobby() {
+    public Hobby() {
     }
 
-    Hobby(String name, int spentHours) {
+    public Hobby(String name, int spentHours) {
         this.name = name;
         this.spentHours = spentHours;
         this.description = "no description";
     }
 
-    Hobby(String name, int spentHours, String description) {
+    public Hobby(String name, int spentHours, String description) {
         this.name = name;
         this.spentHours = spentHours;
         this.description = description;
@@ -44,15 +46,6 @@ public abstract class Hobby {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Hobby{" +
-                "name='" + name + '\'' +
-                ", spentHours=" + spentHours +
-                ", description='" + description + '\'' +
-                '}';
-    }
-
-    public abstract void tellAboutHobby();
+    public abstract String tellAboutHobby(int hours) throws HobbyException;
 }
 
