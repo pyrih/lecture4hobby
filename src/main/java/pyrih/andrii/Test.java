@@ -22,7 +22,7 @@ public class Test {
 
 
 
-        Hobby firsHobby = new Running("Running", 200, "Description.", 113.7f);
+        Hobby firsHobby = new Running("Running", 200, "Description.", 99.7f);
         Hobby secondHobby = new Swimming("Swimming", 20, "Description..", 5.45);
 
         //3 Как вариант можно реализовать через цикл используя метод hasNextLine() класса Сканнер
