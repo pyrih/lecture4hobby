@@ -10,6 +10,10 @@ public abstract class Hobby {
     public Hobby() {
     }
 
+    /**
+     * @param name
+     * @param spentHours
+     */
     public Hobby(String name, int spentHours) {
         this.name = name;
         this.spentHours = spentHours;
@@ -22,10 +26,17 @@ public abstract class Hobby {
         this.description = description;
     }
 
+    /**
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
